@@ -1,0 +1,20 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.nuevo;
+
+import bd.Conexion;
+
+/**
+ *
+ * @author Paola Culebro
+ */
+public class Nuevo {
+
+    public static void main(String[] args) {
+       new Conexion().conectarBD();
+       
+        
+    }
+}
