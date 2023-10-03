@@ -1,0 +1,37 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package bd;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+/**
+ *
+ * @author Paola Culebro
+ */
+public class Conexion {
+    private String driver="org.postgresql.Driver";
+    private String url="jdbc:postgresql://localhost:5432/alumnos";
+    private String user="postgresql";
+    private String pass="020906";
+    private Connection conexion;
+ 
+    
+    public Connection conectarBD(){
+        try{
+            Class.forName(driver);
+            conexion=DriverManager.getConnection(url, user,pass);
+            if(conexion!=null){
+                System.out.println("Conexion Exitosa");
+            }
+        }catch (Exception e) {
+            System.out.println("Error de conexion :: "+e.getMessage());
+        }
+        return null;
+        
+    }
+
+    
+}
